@@ -1,0 +1,28 @@
+// import modules
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+
+// ==========================================
+// VARIABLES
+// ==========================================
+$color-navy: #171E33;
+$color-deep-navy: #1C243C;
+$color-maroon: #781E2A;
+$color-seashell: #FAF7F0;
+$color-gold: #988358;
+$color-white: #FFFFFF;
+$color-brown: #675018;
+$color-black: #000000;
+$color-light-gray: #C2BFB8;
+$color-midnight-blue: #202840;
+
+$font-heading: 'Unna', serif;
+$font-subheading: 'Roboto Slab', serif;
+$font-body: 'Inter', sans-serif;
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

@@ -1,0 +1,563 @@
+// import modules
+@use 'variables' as *;
+
+
+// ==========================================
+// HERO SECTION
+// ==========================================
+.hero-banner {
+  background: no-repeat center/cover;
+  height: 446px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-image: url("../imgs/hero_bg.jpg");
+
+  .hero-content {
+    h1 {
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 116%;
+      margin: 0 0 15px 0;
+      color: $color-white;
+    }
+
+    .breadcrumbs {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: $color-light-gray;
+    }
+  }
+}
+
+
+// ==========================================
+// CONTACT SECTION
+// ==========================================
+.contact-section {
+  padding: 120px 0;
+  background-color: $color-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+
+    .contact-info {
+      h4 {
+        font-size: 32px;
+        font-weight: 400;
+        margin-bottom: 25px;
+        color: $color-deep-navy;
+      }
+
+      .info-list {
+        margin-bottom: 25px;
+
+        .info-item {
+          display: flex;
+          gap: 15px;
+          padding: 15px 0;
+          border-bottom: 1px solid #E3E7F4;
+          color: $color-light-gray;
+          font-size: 20px;
+          font-weight: 400;
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .contact-icon {
+            stroke: $color-gold;
+            line-height: 0;
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      .info-desc {
+        font-size: 16px;
+        line-height: 1.8;
+        color: $color-light-gray;
+        width: 331px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+  .contact-form {
+    flex: 1;
+    max-width: 700px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+      position: relative;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        border-bottom: 1px solid #F0F0F0;
+        background: transparent;
+        border-radius: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: $color-navy;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &::placeholder {
+          color: #C2BFB8;
+        }
+
+        &:focus {
+          border-bottom-color: $color-brown;
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 120px;
+        margin-top: 20px;
+
+        @media (max-width: 375px) {
+          min-height: 100px;
+          margin-top: 15px;
+        }
+      }
+
+      &.grid-2 {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 30px;
+
+        @media (max-width: 600px) {
+          flex-direction: column;
+          gap: 25px;
+          margin-bottom: 25px;
+        }
+
+        .sub-group {
+          flex: 1;
+        }
+      }
+
+      .error-message {
+        color: #EF4444;
+        font-size: 11px;
+      }
+    }
+
+    .btn-submit {
+      background-color: $color-maroon;
+      color: #fff;
+      border: none;
+      padding: 20px 45px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s;
+      margin-top: 20px;
+      width: auto;
+
+      &:hover {
+        background-color: darken($color-maroon, 5%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.stats-section {
+  background-color: #fff;
+  padding: 80px 0 120px;
+
+  @media (max-width: 768px) {
+    padding: 60px 0 80px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 40px 0 60px;
+  }
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .watermark {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 1;
+
+      @media (max-width: 1024px) {
+        width: 140%;
+      }
+
+      @media (max-width: 768px) {
+        width: 180%;
+      }
+
+      @media (max-width: 425px) {
+        width: 250%;
+      }
+    }
+  }
+
+  // Flex container
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+      gap: 60px;
+    }
+
+    @media (max-width: 425px) {
+      gap: 40px;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+
+    @media (max-width: 1024px) {
+      flex: none;
+      min-width: 200px;
+      width: 45%;
+    }
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+
+    h3 {
+      font-family: 'Unna', serif;
+      font-size: 110px;
+      font-weight: 700;
+      color: #988358;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: -0.02em;
+
+      @media (max-width: 1024px) {
+        font-size: 80px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 64px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 56px;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 48px;
+      }
+    }
+
+    p {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #A09D97;
+      margin-top: 15px;
+      letter-spacing: 0.01em;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// FAQ Section
+.faq-section {
+  padding: 100px 0;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  background-color: #fff;
+  position: relative;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #988358;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Unna', serif;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1.1;
+      color: #1C243C;
+      margin: 0 auto 25px;
+
+      @media (max-width: 1024px) {
+        font-size: 48px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 36px;
+      }
+
+      .underline-wrapper {
+        position: relative;
+        display: inline-block;
+
+        .underline-svg {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #A09D97;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+
+  .faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+
+    .faq-item {
+      background-color: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s;
+
+      &.active {
+        background-color: #FDFBF0;
+        border-color: $color-brown;
+      }
+    }
+
+    .faq-header {
+      width: 100%;
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Unna', serif;
+      font-size: 24px;
+      color: $color-navy;
+
+      @media (max-width: 375px) {
+        font-size: 20px;
+        padding: 15px 20px;
+      }
+    }
+
+    .faq-body {
+      max-height: 0;
+      padding: 0 30px;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+
+      &.active {
+        max-height: 300px;
+        padding: 0 30px 24px;
+        opacity: 1;
+      }
+
+      p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        line-height: 160%;
+        color: rgba($color-navy, 0.6);
+      }
+    }
+  }
+
+  .faq-background {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    z-index: 1;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+
+
+// Modal styling
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+
+  .icon-success {
+    width: 60px;
+    height: 60px;
+    background-color: #DEF7EC;
+    color: #03543F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  h3 {
+    font-family: 'Unna', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: $color-navy;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgba($color-navy, 0.6);
+    margin-bottom: 30px;
+  }
+
+  .btn-close {
+    background-color: $color-navy;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-maroon;
+    }
+  }
+}
